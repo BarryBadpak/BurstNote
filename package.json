@@ -1,8 +1,8 @@
 {
   "name": "burstnote",
-  "productName": "burstnote",
-  "version": "1.0.0",
-  "description": "My Electron application description",
+  "productName": "BurstNote",
+  "version": "0.1.0",
+  "description": "User-friendly app for taking (programming) notes.",
   "main": "src/index.js",
   "scripts": {
     "start": "electron-forge start",
@@ -11,9 +11,16 @@
     "publish": "electron-forge publish",
     "lint": "echo \"No linting configured\""
   },
-  "keywords": [],
-  "author": "stefan.haneveer",
-  "license": "MIT",
+  "keywords": [
+    "burstnote",
+    "note",
+    "snippet",
+    "electron",
+    "markdown",
+    "writing"
+  ],
+  "author": "Stefan Haneveer (https://github.com/BarryBadpak)",
+  "license": "GPL-3.0",
   "config": {
     "forge": {
       "make_targets": {
