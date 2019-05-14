@@ -22,7 +22,16 @@
             "es5",
             "scripthost",
             "es2015"
-        ]
+        ],
+        "baseUrl": ".",
+        "paths": {
+            "*": [
+                "src/*"
+            ],
+            "common/*": [
+                "src/common/*"
+            ]
+        }
     },
     "exclude": [
         "node_modules"

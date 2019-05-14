@@ -1,6 +1,7 @@
 import Vue from 'vue';
 import { webFrame } from 'electron';
 import App from './App.vue';
+import DI from 'common/environment/di';
 
 Vue.config.productionTip = false;
 
@@ -8,5 +9,8 @@ Vue.config.productionTip = false;
 webFrame.setZoomFactor(1);
 webFrame.setVisualZoomLevelLimits(1, 1);
 webFrame.setLayoutZoomLevelLimits(0, 0);
+
+const di = new DI();
+di.TYPE_XXXXX;
 
 new Vue(App).$mount('#app');
