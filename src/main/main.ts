@@ -57,9 +57,11 @@ export default class Main
   protected static async createWindow(): Promise<BrowserWindow>
   {
     const window = new BrowserWindow({
+      width: 1000,
       webPreferences: {
         nodeIntegration: true
-      }
+      },
+      titleBarStyle: 'hidden'
     });
     const target: string = isDevelopment
         ? 'http://localhost:9080'

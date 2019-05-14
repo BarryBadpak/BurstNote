@@ -1,0 +1,28 @@
+$--color-graphite: #2b2a2a;
+
+#el-container-app {
+  height: 100%;
+}
+
+#el-col-menu, #el-col-list, #el-col-content {
+  height: 100%;
+}
+
+#el-col-menu, #el-col-list {
+  width: 25%;
+}
+
+#el-col-content {
+  width: 50%;
+}
+
+#el-col-menu {
+  background: $--color-graphite
+}
+
+.gutter-horizontal {
+  cursor: col-resize;
+  //border-left: 1px solid $--border-color-base;
+  border-left: 1px solid $--border-color-base;
+  box-sizing: border-box;
+}
