@@ -3,13 +3,14 @@
   "productName": "BurstNote",
   "version": "0.1.0",
   "description": "User-friendly app for taking (programming) notes.",
-  "main": "src/index.js",
+  "main": "./.webpack/main",
   "scripts": {
-    "start": "electron-forge start",
-    "package": "electron-forge package",
-    "make": "electron-forge make",
-    "publish": "electron-forge publish",
-    "lint": "echo \"No linting configured\""
+    "dev": "yarn electron-webpack dev",
+    "start": "yarn run dev",
+    "build": "node .electron-vue/build.js && electron-builder",
+    "build:dir": "node .electron-vue/build.js && electron-builder --dir",
+    "build:clean": "cross-env BUILD_TARGET=clean node .electron-vue/build.js",
+    "build:web": "cross-env BUILD_TARGET=web node .electron-vue/build.js"
   },
   "keywords": [
     "burstnote",
@@ -54,16 +55,27 @@
     }
   },
   "dependencies": {
-    "electron-compile": "^6.4.4",
-    "electron-devtools-installer": "^2.2.4",
+    "electron": "^5.0.1",
     "electron-squirrel-startup": "^1.0.0",
-    "vue": "^2.6.10"
+    "source-map-support": "^0.5.12",
+    "vue": "^2.6.10",
+    "vue-class-component": "^7.1.0",
+    "vue-property-decorator": "^8.1.1",
+    "vue-router": "^3.0.6"
   },
   "devDependencies": {
-    "babel-plugin-transform-async-to-generator": "^6.24.1",
-    "babel-preset-env": "^1.7.0",
-    "babel-preset-react": "^6.24.1",
+    "@types/electron-devtools-installer": "^2.2.0",
+    "@types/node": "^12.0.0",
+    "electron-devtools-installer": "^2.2.4",
     "electron-forge": "^5.2.4",
-    "electron-prebuilt-compile": "4.0.0"
+    "electron-webpack": "^2.6.2",
+    "electron-webpack-ts": "^3.2.0",
+    "electron-webpack-vue": "^2.3.0",
+    "fs-xattr": "^0.3.0",
+    "inversify": "^5.0.1",
+    "reflect-metadata": "^0.1.13",
+    "tslint": "^5.16.0",
+    "typescript": "^3.4.5",
+    "webpack": "^4.31.0"
   }
 }
