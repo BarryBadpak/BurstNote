@@ -1,0 +1,11 @@
+$--color-graphite: #2b2a2a; // Color for dark theme bg
+
+body {
+  background: $--background-color-base;
+}
+
+
+#el-col-menu {
+  //background: $--color-graphite
+  background: darken($--background-color-base, 5%);
+}

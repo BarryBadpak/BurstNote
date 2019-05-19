@@ -1,13 +1,19 @@
 <template>
     <div id="el-container-app" class="el-container">
         <div id="el-col-menu" class="el-col">
-
+            <div class="el-nav-top ut-align-right">
+                <span class="icon ico-sorting_options"></span>
+            </div>
         </div>
         <div id="el-col-list" class="el-col">
+            <div class="el-nav-top">
 
+            </div>
         </div>
         <div id="el-col-content" class="el-col">
+            <div class="el-nav-top">
 
+            </div>
         </div>
 
 <!--        <el-row>-->
