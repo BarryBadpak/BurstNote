@@ -2,12 +2,18 @@
     <div id="el-container-app" class="el-container">
         <div id="el-col-menu" class="el-col">
             <div class="el-nav-top ut-align-right">
-                <span class="icon ico-sorting_options"></span>
+                <span class="icon ico-unavailable-cloud"></span>
+                <span class="icon ico-sorting-options"></span>
             </div>
         </div>
         <div id="el-col-list" class="el-col">
             <div class="el-nav-top">
-
+                <el-input
+                        placeholder="Search notes"
+                        suffix-icon="el-icon-search"
+                        v-model="model1">
+                </el-input>
+                <span class="icon ico-pencil"></span>
             </div>
         </div>
         <div id="el-col-content" class="el-col">
@@ -39,10 +45,13 @@
     export default class App extends Vue {
         componentTitle = 'BurstNote';
         componentDescription = 'Super nice description.';
+        model1 = '';
 
         mounted() {
             Split(['#el-col-menu', '#el-col-list', '#el-col-content'], {
                 sizes: [20, 30, 50],
+                minSize: [150, 195],
+                snapOffset: 0,
                 gutterSize: 1
             });
         }

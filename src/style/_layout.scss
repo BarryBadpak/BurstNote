@@ -8,6 +8,17 @@
 
 #el-col-menu, #el-col-list {
   width: 25%;
+
+  .icon {
+    width: 30px;
+    height: 30px;
+    margin-left: 10px;
+  }
+
+  .el-nav-top {
+    height: 30px;
+    border-bottom: 1px solid $--border-color-base;
+  }
 }
 
 #el-col-content {
@@ -22,10 +33,25 @@
 }
 
 .el-nav-top {
-  padding: 14px;
+  padding: 10px;
   color: $--color-text-primary;
+}
 
-  .fas {
-    font-size: 24px;
+#el-col-list {
+  text-align: right;
+
+  .el-input {
+    display: inline-block;
+    float: left;
+    width: calc(100% - 40px);
+
+    input {
+      height: 30px;
+      line-height:30px;
+    }
+
+    .el-input__icon {
+      line-height: 30px;
+    }
   }
 }
