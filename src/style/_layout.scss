@@ -35,6 +35,10 @@
 .el-nav-top {
   padding: 10px;
   color: $--color-text-primary;
+
+  .icon, .el-input {
+    -webkit-app-region: no-drag;
+  }
 }
 
 #el-col-list {

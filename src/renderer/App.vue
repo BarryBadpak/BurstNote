@@ -1,13 +1,13 @@
 <template>
     <div id="el-container-app" class="el-container">
         <div id="el-col-menu" class="el-col">
-            <div class="el-nav-top ut-align-right">
+            <div class="el-nav-top ut-align-right" style="-webkit-app-region: drag">
                 <span class="icon ico-unavailable-cloud"></span>
                 <span class="icon ico-sorting-options"></span>
             </div>
         </div>
         <div id="el-col-list" class="el-col">
-            <div class="el-nav-top">
+            <div class="el-nav-top" style="-webkit-app-region: drag">
                 <el-input
                         placeholder="Search notes"
                         suffix-icon="el-icon-search"
@@ -17,7 +17,7 @@
             </div>
         </div>
         <div id="el-col-content" class="el-col">
-            <div class="el-nav-top">
+            <div class="el-nav-top" style="-webkit-app-region: drag">
 
             </div>
         </div>
@@ -43,11 +43,14 @@
 
     @Component
     export default class App extends Vue {
-        componentTitle = 'BurstNote';
-        componentDescription = 'Super nice description.';
-        model1 = '';
+        searchValue = '';
 
         mounted() {
+            this.buildSplitPanes();
+        }
+
+        private buildSplitPanes()
+        {
             Split(['#el-col-menu', '#el-col-list', '#el-col-content'], {
                 sizes: [20, 30, 50],
                 minSize: [150, 195],
