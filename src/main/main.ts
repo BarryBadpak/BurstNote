@@ -73,7 +73,9 @@ export default class Main
 
     if (isDevelopment) {
       await installExtension(VUEJS_DEVTOOLS);
-      window.webContents.openDevTools();
+      window.webContents.on('did-frame-finish-load', () => {
+        window.webContents.openDevTools();
+      });
     }
 
     return window;
