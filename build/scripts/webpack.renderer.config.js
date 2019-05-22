@@ -122,6 +122,7 @@ let rendererConfig = {
         extensions: ['.js', '.ts', '.tsx', '.json', '.node', '.css', '.vue']
     },
     devServer: {
+        contentBase: [path.join(__dirname,  '../../static')],
         host: 'localhost',
         port: '9080',
         hot: true,
